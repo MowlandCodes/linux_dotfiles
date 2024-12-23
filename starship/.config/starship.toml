@@ -1,0 +1,108 @@
+format = """
+[░▒▓](lavender)\
+[  ](bg:lavender fg:base)\
+[](bg:mauve fg:lavender)\
+$directory\
+[](fg:mauve bg:surface_1)\
+$git_branch\
+$git_status\
+[](fg:surface_1 bg:surface_0)\
+$nodejs\
+$python\
+$golang\
+$php\
+$lua\
+[](fg:surface_0 bg:mantle)\
+$time\
+[ ](fg:mantle)\
+\n$character"""
+
+palette = "catppuccin_macchiato"
+
+[palettes.catppuccin_macchiato]
+rosewater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+sub_1 = "#b8c0e0"
+sub_0 = "#a5adcb"
+overlay_2 = "#939ab7"
+overlay_1 = "#8087a2"
+overlay_0 = "#6e738d"
+surface_2 = "#5b6078"
+surface_1 = "#494d64"
+surface_0 = "#363a4f"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
+
+[directory]
+style = "fg:mantle bg:mauve"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:surface_1"
+format = '[[ $symbol $branch ](fg:mauve bg:surface_1)]($style)'
+
+[git_status]
+style = "bg:surface_1"
+format = '[[($all_status$ahead_behind )](fg:mauve bg:surface_1)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:surface_0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface_0)]($style)'
+
+[c]
+symbol = ""
+style = "bg:surface_0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface_0)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:surface_0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface_0)]($style)'
+
+[php]
+symbol = ""
+style = "bg:surface_0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface_0)]($style)'
+
+[lua]
+symbol = ""
+style = "bg:surface_0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface_0)]($style)'
+
+[python]
+symbol = ""
+style = "bg:surface_0"
+format = '[[ $symbol ($version) ](fg:lavender bg:surface_0)]($style)'
+
+[line_break]
+disabled = true
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:mantle"
+format = '[[  $time ](fg:sub_1 bg:mantle)]($style)'
