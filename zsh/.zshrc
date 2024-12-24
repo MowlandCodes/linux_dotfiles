@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/mowlandcodes/.zsh/completions:"* ]]; then export FPATH="/home/mowlandcodes/.zsh/completions:$FPATH"; fi
 # Set up the prompt
 
 #autoload -Uz promptinit
@@ -43,3 +45,4 @@ source /home/mowlandcodes/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlig
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias cat="batcat"
+. "/home/mowlandcodes/.deno/env"
