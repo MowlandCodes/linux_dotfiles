@@ -42,4 +42,4 @@ eval "$(starship init zsh)"
 source /home/mowlandcodes/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(zoxide init zsh)"
 alias cd="z"
-alias cat="bat"
+alias cat="batcat"
