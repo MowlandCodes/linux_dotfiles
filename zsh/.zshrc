@@ -47,3 +47,8 @@ alias cd="z"
 alias cat="batcat"
 . "/home/mowlandcodes/.deno/env"
 alias gdiff="git diff | delta"
+
+
+# Generated for pdtm. Do not edit.
+export PATH=$PATH:/home/mowlandcodes/.pdtm/go/bin
+
