@@ -37,6 +37,13 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# Function for my aliases
+create_symlink () {
+    sudo ln -sf $(pwd)/$1 /usr/bin/$2
+}
+
+
+############################################
 
 alias ls="eza --icons --group-directories-first"
 alias ll="eza --icons --group-directories-first -l --all"
@@ -49,6 +56,9 @@ alias cat="batcat"
 alias gdiff="git diff | delta"
 alias src="source ~/.zshrc"
 alias c="clear"
+alias symlink="create_symlink"
+alias grep="grep --color=auto"
+alias john="/home/mowlandcodes/john/run/john"
 
 
 # Generated for pdtm. Do not edit.
