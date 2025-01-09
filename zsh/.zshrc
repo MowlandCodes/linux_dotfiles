@@ -47,8 +47,38 @@ alias cd="z"
 alias cat="batcat"
 . "/home/mowlandcodes/.deno/env"
 alias gdiff="git diff | delta"
+alias src="source ~/.zshrc"
+alias c="clear"
 
 
 # Generated for pdtm. Do not edit.
 export PATH=$PATH:/home/mowlandcodes/.pdtm/go/bin
+source <(fzf --zsh)
+
+# Bind CTRL + T to FZF search for files, including hidden ones
+fzf_open_in_nvim() {
+    while true; do
+      local file
+      file=$(fd . --type f --hidden | fzf --preview 'batcat --color=always --style=numbers {}' --preview-window=right:50% --height 40% --ansi --reverse --prompt 'Search Files -> ') || return
+      [ -z "$file" ] && break 
+
+      nvim "$file"
+    done
+}
+
+zle -N fzf_open_in_nvim_widget fzf_open_in_nvim
+bindkey '^T' fzf_open_in_nvim_widget
+
+# Bind ALT + C to FZF search for directory, and change to it
+fzf_cd_with_dirtree() {
+    local dir
+    dir=$(fd . --type d --hidden | fzf --preview 'tree -C {}' --preview-window=right:50% --height 60% --ansi --reverse --prompt 'Navigate Directory -> ' --bind "ctrl-u:preview-up,ctrl-d:preview-down") || return
+    [ -n "$dir" ] && cd $dir 
+}
+
+zle -N cd_with_dirtree_widget fzf_cd_with_dirtree
+bindkey '^[c' cd_with_dirtree_widget
+
+export FZF_DEFAULT_COMMAND="find . -type f "
+export FZF_DEFAULT_OPTS="--reverse --border --preview 'batcat -n --color=always {}' --preview-window '' --height 50% --ansi"
 
