@@ -157,7 +157,6 @@ alias history="history 0"
 alias ls="eza --icons --group-directories-first"
 alias ll="eza --icons --group-directories-first -l --all"
 eval "$(starship init zsh)"
-source /home/mowlandcodes/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias cat="batcat"
