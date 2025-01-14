@@ -158,7 +158,7 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-alias history="history 0"
+alias history='eval "$(cat $HISTFILE | tac | fzf)"'
 alias ls="eza --icons --group-directories-first"
 alias ll="eza --icons --group-directories-first -l --all"
 eval "$(starship init zsh)"
