@@ -205,3 +205,10 @@ bindkey '^[c' cd_with_dirtree_widget
 export FZF_DEFAULT_COMMAND="find . -type f "
 export FZF_DEFAULT_OPTS="--reverse --border --preview 'batcat -n --color=always {}' --preview-window '' --height 50% --ansi"
 
+export PATH="/home/mowlandcodes/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/mowlandcodes/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+# Adding Laravel Completion
+eval $(laravel completion)
+
+
