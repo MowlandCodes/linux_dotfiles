@@ -2,6 +2,8 @@
 if [[ ":$FPATH:" != *":/home/mowlandcodes/.zsh/completions:"* ]]; then export FPATH="/home/mowlandcodes/.zsh/completions:$FPATH"; fi
 # Set up the prompt
 
+EDITOR=nvim
+
 
 setopt histignorealldups sharehistory
 setopt autocd
