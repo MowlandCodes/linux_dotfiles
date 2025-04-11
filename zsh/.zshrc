@@ -34,6 +34,7 @@ bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + tab undo last action
 
 # enable completion features
+fpath+=~/.zfunc
 autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
 zstyle ':completion:*:*:*:*:*' menu select
@@ -211,3 +212,4 @@ export PATH="/home/mowlandcodes/.cargo/bin:$PATH"
 export PATH="/home/mowlandcodes/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/mowlandcodes/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 export PATH="$PATH:/usr/local/go/bin"
+export PRETTIER_CONFIG=~/.prettierrc.json
