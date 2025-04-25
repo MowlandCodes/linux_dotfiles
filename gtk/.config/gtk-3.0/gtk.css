@@ -1,0 +1,33 @@
+.xfce4-panel.horizontal {
+    border: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgba(33, 34, 51, 0.92);
+}
+
+.xfce4-panel widget grid button.flat.toggle {
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: all 0.4s ease-in-out;
+    padding: 0 8;
+}
+
+.xfce4-panel widget grid button.flat.toggle:hover {
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+
+.xfce4-panel widget grid button.flat.toggle:checked {
+    border-bottom: 1px solid #c6a0f6;
+    background-color: transparent;
+}
+
+#XfcePanelWindowWrapper {
+    background-color: rgba(33, 34, 51, 0.92);
+}
+
+#whiskermenu-button {
+    background-color: transparent;
+}
