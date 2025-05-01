@@ -175,6 +175,7 @@ alias c="clear"
 alias symlink="create_symlink"
 alias grep="grep --color=auto"
 alias john="/home/mowlandcodes/john/run/john"
+alias lz="lazygit"
 
 
 # Generated for pdtm. Do not edit.
