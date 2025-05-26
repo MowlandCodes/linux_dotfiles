@@ -94,6 +94,8 @@ case ${chosen} in
 			betterlockscreen -l
 		elif [[ -x '/usr/bin/i3lock' ]]; then
 			i3lock
+        elif [[ -x '/usr/bin/dm-tool' ]]; then
+            dm-tool lock
 		fi
         ;;
     $suspend)
